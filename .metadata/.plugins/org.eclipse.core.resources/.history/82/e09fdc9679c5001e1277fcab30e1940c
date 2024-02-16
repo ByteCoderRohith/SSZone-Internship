@@ -1,0 +1,29 @@
+package SimpleTask;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Manager {
+	
+	private static ArrayList<Task> task=new ArrayList<>();
+	
+	private static Scanner scn=new Scanner(System.in);
+	
+	private static void Display() {
+		System.out.println("1: Add Task ");
+		System.out.println("2: Remove Task ");
+		System.out.println("3: Display Task ");
+		System.out.println("4: Exit ");
+		System.out.println("------ENTER YOUR CHOICE------");
+		
+	}
+	
+	private static void AddTask() {
+		
+	}
+	
+	private static void RemoveTask() {
+		
+	}
+
+}

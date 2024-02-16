@@ -1,0 +1,70 @@
+package SimpleTask;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Manager {
+	
+	private static ArrayList<Task> tasks=new ArrayList<>();
+	
+	private static Scanner scn=new Scanner(System.in);
+	
+	public static void main(String []args) {
+	 
+		Scanner scn=new Scanner(System.in);
+		while(true) {
+			Manager.Display();
+			int choice=scn.nextInt();
+			
+			switch (choice) {
+			case 1: {
+				AddTask();
+				break;
+			}
+			case 2:{
+				RemoveTask();
+			}
+			case 3:{
+				ListTask();
+			}
+			default:
+				throw new IllegalArgumentException("Unexpected value: " + choice);
+			}
+			
+		}
+		
+	}
+			
+	private static void Display() {
+		System.out.println(" Choose the below Options ");
+		System.out.println("1: Add Task ");
+		System.out.println("2: Remove Task ");
+		System.out.println("3: List Task ");
+		System.out.println("4: Exit ");
+		System.out.println("------ENTER YOUR CHOICE------");
+		
+	}
+	
+	private static void AddTask() {
+		Scanner scn=new Scanner(System.in);
+		System.out.println("Enter Name");
+		String name=scn.nextLine();
+		System.out.println("Enter decription ");
+		String decription=scn.nextLine();
+		System.out.println("Enter duedate");
+		String duedate=scn.nextLine();
+		
+		Task task=new Task(name, decription, duedate);
+		tasks.add(task);
+		
+	}
+	
+	private static void RemoveTask() {
+		
+	}
+	private static void ListTask() {
+		
+	}
+
+}
+	
